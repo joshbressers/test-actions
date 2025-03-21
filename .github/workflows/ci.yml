@@ -31,3 +31,8 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
+
+      - name: Build SBOM
+        - uses: anchore/sbom-action@v0
+          with:
+            path: /
