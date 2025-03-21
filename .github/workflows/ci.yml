@@ -34,7 +34,7 @@ jobs:
 
 
       - name: Build SBOM
-        steps:
-          - uses: anchore/sbom-action@v0
-            with:
-              path: /
+        id: sbom
+        uses: anchore/sbom-action@v0
+        with:
+          path: /
