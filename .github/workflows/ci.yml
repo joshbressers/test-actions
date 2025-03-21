@@ -32,7 +32,9 @@ jobs:
             echo "$file was changed"
           done
 
+
       - name: Build SBOM
-        - uses: anchore/sbom-action@v0
-          with:
-            path: /
+        steps:
+          - uses: anchore/sbom-action@v0
+            with:
+              path: /
