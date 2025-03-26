@@ -32,17 +32,23 @@ jobs:
             echo "$file was changed"
           done
 
-
-      - name: Build SBOM /opt
-        id: sbom-opt
+      - name: Build SBOM /
+        id: sbom-slash
         uses: anchore/sbom-action@v0
         with:
-          path: /opt
+          path: /
           format: json
 
-      - name: Build SBOM /home
-        id: sbom-home
-        uses: anchore/sbom-action@v0
-        with:
-          path: /home
-          format: json
+#      - name: Build SBOM /opt
+#        id: sbom-opt
+#        uses: anchore/sbom-action@v0
+#        with:
+#          path: /opt
+#          format: json
+
+#      - name: Build SBOM /home
+#        id: sbom-home
+#        uses: anchore/sbom-action@v0
+#        with:
+#          path: /home
+#          format: json
