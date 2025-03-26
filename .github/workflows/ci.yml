@@ -33,8 +33,16 @@ jobs:
           done
 
 
-      - name: Build SBOM
+      - name: Build SBOM /opt
         id: sbom
         uses: anchore/sbom-action@v0
         with:
-          path: /
+          path: /opt
+          format: json
+
+      - name: Build SBOM /home
+        id: sbom
+        uses: anchore/sbom-action@v0
+        with:
+          path: /home
+          format: json
